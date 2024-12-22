@@ -1,10 +1,15 @@
 #include <iostream>
 
-consteval int get_version() {
-    return 20;
-}
-
 int main() {
-    std::cout << "Hello, World in C++" << get_version() << "!" << std::endl;
+    auto func = [](double a, double b) -> double {
+        return (a + b);
+    };
+
+    auto result {func(30, 10)};
+    std::cout << "result: " << result << std::endl;
+    std::cout << "func(9, 25): " << func(9, 25) << std::endl;
+
+    std::cout << "Done!" << std::endl;
+
     return 0;
 }
